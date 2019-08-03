@@ -3,7 +3,10 @@ import Photo from './Photo';
 import NotFound from './NotFound';
 
 class PhotoContainer extends Component {
+
     render() {
+        const {match} = this.props;
+        console.log(match);
         return (
             <div className="photo-container">
                 <h2>Results</h2>
