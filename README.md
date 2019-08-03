@@ -1,3 +1,7 @@
+# React Gallery App
+
+A React app that creates an image gallery.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
