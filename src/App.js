@@ -1,5 +1,9 @@
 import React, {Component} from 'react';
-import {BrowserRouter as Router, Route} from 'react-router-dom';
+import {
+  BrowserRouter as Router, 
+  Route,
+  Switch
+} from 'react-router-dom';
 
 // App components
 import SearchForm from './components/SearchForm';
@@ -18,10 +22,13 @@ class App extends Component {
     return (
       <Router>
         <div className="container">
-          <Route exact path="/" component={SearchForm} />
+          <SearchForm />
           <Nav />
-          <Route exact path={'/search/:searchName'} component={PhotoContainer}/>
-          <Route component={NotFound} />
+          <Switch>
+            <Route exact path="/" />
+            <Route path={'/search/:searchName'} component={PhotoContainer}/>
+            <Route component={NotFound} />
+          </Switch>
         </div>
       </Router>
     );

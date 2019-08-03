@@ -6,13 +6,12 @@ class PhotoContainer extends Component {
 
     render() {
         const {match} = this.props;
-        console.log(match);
         return (
             <div className="photo-container">
                 <h2>Results</h2>
                 <ul>
                     <Photo />
-                    <NotFound />
+                    {/* Add logic later */}
                 </ul>
             </div>
         )
