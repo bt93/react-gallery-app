@@ -4,6 +4,8 @@ import Nav from './components/Nav';
 import PhotoContainer from './components/PhotoContainer';
 import './css/index.css';
 
+// import apiKey from './config';
+
 class App extends Component {
 
   render() {
