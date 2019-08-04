@@ -1,12 +1,50 @@
 # React Gallery App
 
-A React app that creates an image gallery. Instead of using the Flickr API, I chose to use the [Unsplash API](https://unsplash.com/). You can create an access key [here](https://unsplash.com/developers).
+Seventh project for the Treehouse Full-Stack JavaScript Techdegree. A React app that creates an image gallery. Instead of using the Flickr API, I chose to use the [Unsplash API](https://unsplash.com/). You can create an access key [here](https://unsplash.com/developers).
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Get Started
 
-In the project directory, you can run:
+To get started, follow the following instructions:
+
+### Copy Files
+
+Copy the project files.
+
+### Create Unsplash Profile
+
+Go to [https://unsplash.com/developers](https://unsplash.com/developers) and click on `Register as a Developer`.
+Fill in the form and follow the instructions given to you.
+
+### New Application
+
+Once you've successfully logged in, click on `New Application`. Agree to the terms of service, and click `Accept Terms`.
+Fill out the form info. Give any name you'd like and description. 
+
+### Copy Key
+
+When you get to the app dashboard, scroll down to the `Key` section. Copy the Access key.
+
+### Create Config
+
+Go to the `/src` directory and create a file called `config.js`. 
+
+Use this code block:
+
+```javascript
+const apiKey = '<YOUR-KEY-HERE>';
+export default apiKey;
+```
+Fill in the `apiKey` variable with the key you obtained.
+
+Then in the console type:
+
+### `npm init`
+
+This will initiate node files and unpack everything for you.
+
+Then type:
 
 ### `npm start`
 
@@ -15,58 +53,3 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.<br>
 You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
