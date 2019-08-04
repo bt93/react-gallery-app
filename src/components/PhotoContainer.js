@@ -6,6 +6,7 @@ class PhotoContainer extends Component {
 
     render() {
         const {match} = this.props;
+        console.log(match.params);
         return (
             <div className="photo-container">
                 <h2>Results</h2>

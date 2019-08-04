@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {
   BrowserRouter as Router, 
   Route,
+  Redirect,
   Switch
 } from 'react-router-dom';
 
@@ -25,8 +26,8 @@ class App extends Component {
           <SearchForm />
           <Nav />
           <Switch>
-            <Route exact path="/" />
-            <Route path={'/search/:searchName'} component={PhotoContainer}/>
+            <Route exact path="/" render={() => <Redirect to="/search/cats"/>} />
+            <Route path={'/search/:query'} component={PhotoContainer}/>
             <Route component={NotFound} />
           </Switch>
         </div>
