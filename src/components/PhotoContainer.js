@@ -4,6 +4,11 @@ import NotFound from './NotFound';
 
 import apiKey from '../config';
 
+/**
+ * Containers for the photos
+ * Recieves the params from App.js and fetches
+ * new data when route changes
+ */
 class PhotoContainer extends Component {
     constructor() {
         super();
@@ -27,7 +32,7 @@ class PhotoContainer extends Component {
       }
 
     handleSearch(match) {
-        fetch(`https://api.unsplash.com/search/photos?page=1&query=${match.params.query}&client_id=${apiKey}`)
+        fetch(`https://api.unsplash.com/search/photos?page=1&query=${match.params.query}&per_page=24&client_id=${apiKey}`)
         .then(res => res.json())
         .then(data => this.setState({
             isLoading: false,
