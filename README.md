@@ -1,6 +1,6 @@
 # React Gallery App
 
-A React app that creates an image gallery.
+A React app that creates an image gallery. Instead of using the Flickr API, I chose to use the [Unsplash API](https://unsplash.com/). You can create an access key [here](https://unsplash.com/developers).
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
