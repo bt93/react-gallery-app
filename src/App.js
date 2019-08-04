@@ -19,16 +19,23 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      isLaoding: true,
-      data: []
+      query: ''
     }
+    this.inputSearch = this.inputSearch.bind(this);
+  }
+
+  inputSearch(input) {
+    this.setState({
+      query: input
+    })
   }
 
   render() {
+    console.log(this.state.query)
     return (
       <Router>
         <div className="container">
-          <SearchForm />
+          <SearchForm inputSearch={this.inputSearch}/>
           <Nav />
           <Switch>
             <Route exact path="/" render={() => <Redirect to="/search/cats"/>} />
