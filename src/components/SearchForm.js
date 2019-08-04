@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {withRouter} from 'react-router-dom';
 
 class SeachForm extends Component {
     constructor() {
@@ -12,18 +13,20 @@ class SeachForm extends Component {
 
     handleChange(e) {
         this.setState({
-            searchTerm: e.target.value.toLowerCase()
+            searchTerm: e.target.value
         });
     }
 
     handleSubmit(e) {
         e.preventDefault();
 
-        this.props.inputSearch(this.state.searchTerm);
+        const { history: { push } } = this.props;
+        push(`/search/${this.state.searchTerm.toLowerCase()}`);
         this.setState({
             searchTerm: ''
         })
     }
+
 
     render() {
         return (
@@ -40,4 +43,4 @@ class SeachForm extends Component {
     }
 }
 
-export default SeachForm;
+export default withRouter(SeachForm);

@@ -14,7 +14,8 @@ class PhotoContainer extends Component {
         super();
         this.state = {
             isLoading: true,
-            data: []
+            data: [],
+            name: ''
         }
         this.handleSearch = this.handleSearch.bind(this);
     }
@@ -36,14 +37,15 @@ class PhotoContainer extends Component {
         .then(res => res.json())
         .then(data => this.setState({
             isLoading: false,
-            data: data.results
+            data: data.results,
+            name: match.params.query
         }));
     }
 
     render() {
         return (
             <div className="photo-container">
-                <h2>Results</h2>
+                <h2>Results for: {this.state.name}</h2>
                 <ul>
                     {
                         this.state.data.map(photo => <Photo key={photo.id} data={photo}/>)
