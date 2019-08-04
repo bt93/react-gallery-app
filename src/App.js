@@ -15,9 +15,14 @@ import NotFound from './components/NotFound';
 // CSS
 import './css/index.css';
 
-import apiKey from './config';
-
 class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      isLaoding: true,
+      data: []
+    }
+  }
 
   render() {
     return (
