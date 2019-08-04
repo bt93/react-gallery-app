@@ -39,19 +39,31 @@ class PhotoContainer extends Component {
             isLoading: false,
             data: data.results,
             name: match.params.query
-        }));
+        }))
+        .catch(err => {
+            console.log('Something went wrong: ', err);
+        });
     }
 
     render() {
         return (
             <div className="photo-container">
                 <h2>Results for: {this.state.name}</h2>
-                <ul>
-                    {
-                        this.state.data.map(photo => <Photo key={photo.id} data={photo}/>)
+                    { !this.state.isLoading ? (
+                            this.state.data.length > 0 ? (
+                                <ul>
+                                    {this.state.data.map(photo => <Photo key={photo.id} data={photo}/>)}
+                                </ul>
+                            ) : (
+                                <NotFound />
+                            )
+                    ) : (
+                        <div>
+                            <h1>Loading...</h1>
+                        </div>
+                    )
                     }
                     {/* Add logic later */}
-                </ul>
             </div>
         )
     }

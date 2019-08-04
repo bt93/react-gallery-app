@@ -10,7 +10,7 @@ import {
 import SearchForm from './components/SearchForm';
 import Nav from './components/Nav';
 import PhotoContainer from './components/PhotoContainer';
-import NotFound from './components/NotFound';
+import BadRoute from './components/BadRoute';
 
 // CSS
 import './css/index.css';
@@ -24,7 +24,7 @@ const App = () => {
         <Switch>
           <Route exact path="/" render={() => <Redirect to="/search/cats"/>} />
           <Route path={'/search/:query'} component={PhotoContainer}/>
-          <Route component={NotFound} />
+          <Route component={BadRoute} />
         </Switch>
       </div>
     </Router>
