@@ -4,6 +4,8 @@ import NotFound from './NotFound';
 
 import apiKey from '../config';
 
+import Loading from '../img/loading.gif';
+
 /**
  * Containers for the photos
  * Recieves the params from App.js and fetches
@@ -52,6 +54,10 @@ class PhotoContainer extends Component {
         .catch(err => {
             console.log('Something went wrong: ', err);
         });
+
+        this.setState({
+            isLoading: true
+        })
     }
 
     render() {
@@ -72,7 +78,7 @@ class PhotoContainer extends Component {
                             )
                     ) : (
                         <div>
-                            <h1>Loading...</h1>
+                            <img src={Loading} alt="Loading..."/>
                         </div>
                     )
                     }
