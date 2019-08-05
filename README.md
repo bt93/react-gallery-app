@@ -38,7 +38,7 @@ export default apiKey;
 ```
 Fill in the `apiKey` variable with the key you obtained.
 
-Then in the console type:
+Then in your command line type:
 
 ### `npm init`
 
