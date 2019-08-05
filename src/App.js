@@ -21,6 +21,7 @@ const App = () => {
       <div className="container">
         <SearchForm />
         <Nav />
+        {/* Routes for search and 404 */}
         <Switch>
           <Route exact path="/" render={() => <Redirect to="/search/cats"/>} />
           <Route path={'/search/:query'} component={PhotoContainer}/>

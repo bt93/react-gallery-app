@@ -1,6 +1,9 @@
 import React, {Component} from 'react';
 import {withRouter} from 'react-router-dom';
 
+/**
+ * Holds the search form and completes logic required
+ */
 class SeachForm extends Component {
     constructor() {
         super();
@@ -11,12 +14,23 @@ class SeachForm extends Component {
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
+    /**
+     * Watches all changes to search from and set the state
+     * @param {object} e - Event Object 
+     */
     handleChange(e) {
         this.setState({
             searchTerm: e.target.value
         });
     }
 
+     /**
+      * When submited, takes the state and uses withRouter 
+      * module from the React Router
+      * to programmatically change the current route to the 
+      * search term, then clears the searchTerm state
+      * @param {object} e - Event Object 
+      */
     handleSubmit(e) {
         e.preventDefault();
 
@@ -26,7 +40,6 @@ class SeachForm extends Component {
             searchTerm: ''
         })
     }
-
 
     render() {
         return (

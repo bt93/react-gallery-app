@@ -1,5 +1,6 @@
 import React from 'react';
 
+// Displays images fetched from PhotoContainer
 const Photo = ({data}) => {
     return (
         <li>

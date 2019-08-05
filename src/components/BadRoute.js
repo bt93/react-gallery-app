@@ -1,5 +1,6 @@
 import React from 'react';
 
+// Component for a bad route
 const BadRoute = () => {
     return (
         <div className="not-found">
